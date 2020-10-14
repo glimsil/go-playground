@@ -13,6 +13,6 @@ To generate swagger files under the docs folder you need to type (you can check 
 Then you can just type:
     go run main.go
 
-Server will listen on port 8080 with an endpoint on path `/ping`
+Service will listen on port 8080.
 
 You can access swagger on http://localhost:8080/swagger/index.html
