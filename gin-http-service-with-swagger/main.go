@@ -49,7 +49,7 @@ func (m *Main) initServer() error {
 // @description List APIs of Test Service
 // @termsOfService http://swagger.io/terms/
 
-// @host localhost:8808
+// @host localhost:8080
 // @BasePath /api/v1
 func main() {
 	m := Main{}
