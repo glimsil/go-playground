@@ -1,0 +1,29 @@
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] POST   /api/v1/admin/auth        --> _/home/ilegra/git/go-playground/gin-jwt-auth/rest.(*User).Authenticate-fm (3 handlers)
+[GIN-debug] POST   /api/v1/user              --> _/home/ilegra/git/go-playground/gin-jwt-auth/rest.(*User).AddUser-fm (4 handlers)
+[GIN-debug] GET    /api/v1/user/list         --> _/home/ilegra/git/go-playground/gin-jwt-auth/rest.(*User).ListUsers-fm (4 handlers)
+[GIN-debug] GET    /api/v1/user/detail/:id   --> _/home/ilegra/git/go-playground/gin-jwt-auth/rest.(*User).GetUserByID-fm (4 handlers)
+[GIN-debug] GET    /api/v1/user/             --> _/home/ilegra/git/go-playground/gin-jwt-auth/rest.(*User).GetUserByParams-fm (4 handlers)
+[GIN-debug] DELETE /api/v1/user/:id          --> _/home/ilegra/git/go-playground/gin-jwt-auth/rest.(*User).DeleteUserByID-fm (4 handlers)
+[GIN-debug] PATCH  /api/v1/user              --> _/home/ilegra/git/go-playground/gin-jwt-auth/rest.(*User).UpdateUser-fm (4 handlers)
+[GIN-debug] GET    /swagger/*any             --> github.com/swaggo/gin-swagger.CustomWrapHandler.func1 (3 handlers)
+[GIN-debug] Listening and serving HTTP on :8080
+[GIN] 2020/10/14 - 17:46:10 | 200 |     263.969µs |             ::1 | GET      "/swagger/index.html"
+[GIN] 2020/10/14 - 17:46:10 | 200 |     395.467µs |             ::1 | GET      "/swagger/swagger-ui.css"
+[GIN] 2020/10/14 - 17:46:10 | 200 |     250.434µs |             ::1 | GET      "/swagger/swagger-ui-standalone-preset.js"
+[GIN] 2020/10/14 - 17:46:10 | 200 |     591.919µs |             ::1 | GET      "/swagger/swagger-ui-bundle.js"
+[GIN] 2020/10/14 - 17:46:10 | 200 |     210.424µs |             ::1 | GET      "/swagger/doc.json"
+[GIN] 2020/10/14 - 17:46:10 | 200 |    1.569088ms |             ::1 | GET      "/swagger/favicon-32x32.png"
+[GIN] 2020/10/14 - 17:46:21 | 200 |  114.378165ms |             ::1 | POST     "/api/v1/admin/auth"
+[GIN-debug] redirecting request 301: /api/v1/user/ --> /api/v1/user/?id=a
+[GIN] 2020/10/14 - 17:46:35 | 500 |     141.787µs |             ::1 | GET      "/api/v1/user/?id=a"
+[GIN-debug] redirecting request 301: /api/v1/user/ --> /api/v1/user/?id=5f87613c4c96f81f596cf54e
+[GIN] 2020/10/14 - 17:46:46 | 200 |    6.722318ms |             ::1 | GET      "/api/v1/user/?id=5f87613c4c96f81f596cf54e"
+[GIN] 2020/10/14 - 17:46:50 | 401 |       6.781µs |             ::1 | GET      "/api/v1/user/?id=5f87613c4c96f81f596cf54e"
+Error #01: token contains an invalid number of segments
+[GIN] 2020/10/14 - 17:46:55 | 200 |   11.994802ms |             ::1 | GET      "/api/v1/user/?id=5f87613c4c96f81f596cf54e"
