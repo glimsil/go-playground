@@ -1,0 +1,33 @@
+basePath: /api/v1
+definitions:
+  model.User:
+    properties:
+      email:
+        type: string
+      name:
+        type: string
+    type: object
+host: localhost:8808
+info:
+  contact: {}
+  description: List APIs of Test Service
+  termsOfService: http://swagger.io/terms/
+  title: Test Service API Document
+  version: "1.0"
+paths:
+  /user:
+    get:
+      consumes:
+      - application/json
+      description: Get a user
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/model.User'
+      summary: Get a user
+      tags:
+      - user
+swagger: "2.0"

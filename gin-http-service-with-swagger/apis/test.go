@@ -17,8 +17,7 @@ type User struct {
 // @Tags user
 // @Accept  json
 // @Produce  json
-// @Failure 500 {object} models.Error
-// @Success 200 {object} models.User
+// @Success 200 {object} model.User
 // @Router /user [get]
 func (u *User) GetUser(ctx *gin.Context) {
 	var user model.User
