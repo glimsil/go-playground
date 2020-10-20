@@ -66,7 +66,7 @@ func (db *MongoDB) initData() error {
 	if count < 1 {
 		// Create admin/admin account
 		var user model.User
-		user = model.User{bson.NewObjectId(), "admin", "admin", db.utils.EncryptPassword("admin")}
+		user = model.User{bson.NewObjectId(), "admin", "admin", db.utils.EncryptPassword("admin"), []string{"USER", "ADMIN"}}
 		err = collection.Insert(&user)
 	}
 

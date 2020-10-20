@@ -36,12 +36,13 @@ func (u *User) Authenticate(ctx *gin.Context) {
 
 	// var user model.User
 	var err error
-	_, err = u.userDAO.Login(email, password)
+	var user model.User
+	user, err = u.userDAO.Login(email, password)
 
 	if err == nil {
 		var tokenString string
 		// Generate token string
-		tokenString, err = u.utils.GenerateJWT(email, "")
+		tokenString, err = u.utils.GenerateJWT(user.ID.Hex(), email, user.Roles)
 		if err != nil {
 			ctx.JSON(http.StatusInternalServerError, model.Error{common.StatusCodeUnknown, err.Error()})
 			log.Debug("[ERROR]: ", err)
@@ -80,7 +81,7 @@ func (u *User) AddUser(ctx *gin.Context) {
 		return
 	}
 
-	user := model.User{bson.NewObjectId(), addUser.Email, addUser.Name, addUser.Password}
+	user := model.User{bson.NewObjectId(), addUser.Email, addUser.Name, addUser.Password, []string{"USER"}}
 	err := u.userDAO.Insert(user)
 	if err == nil {
 		ctx.JSON(http.StatusOK, model.Message{"Successfully"})

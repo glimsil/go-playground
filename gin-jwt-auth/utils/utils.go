@@ -12,8 +12,9 @@ import (
 
 // SdtClaims defines the custom claims
 type SdtClaims struct {
-	Name string `json:"name"`
-	Role string `json:"role"`
+	UserId string   `json:"userId"`
+	Email  string   `json:"email"`
+	Roles  []string `json:"role"`
 	jwt_lib.StandardClaims
 }
 
@@ -21,9 +22,10 @@ type Utils struct {
 }
 
 // GenerateJWT generates token from the given information
-func (u *Utils) GenerateJWT(name string, role string) (string, error) {
+func (u *Utils) GenerateJWT(userId string, email string, role []string) (string, error) {
 	claims := SdtClaims{
-		name,
+		userId,
+		email,
 		role,
 		jwt_lib.StandardClaims{
 			ExpiresAt: time.Now().Add(time.Hour * 1).Unix(),

@@ -13,6 +13,7 @@ type User struct {
 	Email    string        `bson:"email" json:"email" example:"glimsil@email.com"`
 	Name     string        `bson:"name" json:"name" example:"gustavo"`
 	Password string        `bson:"password" json:"password" example:"randompass123"`
+	Roles    []string      `bson:"roles" json:"roles" example:"['USER']"`
 }
 
 // AddUser information
