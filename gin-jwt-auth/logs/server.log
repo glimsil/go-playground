@@ -1,9 +1,0 @@
-{"level":"debug","msg":"Can't connect to mongo, go error: server returned error on SASL authentication step: Authentication failed.","time":"2020-10-14T17:21:52-03:00"}
-{"level":"debug","msg":"Can't connect to mongo, go error: server returned error on SASL authentication step: Authentication failed.","time":"2020-10-14T17:21:58-03:00"}
-{"level":"debug","msg":"Can't connect to mongo, go error: server returned error on SASL authentication step: Authentication failed.","time":"2020-10-14T17:23:22-03:00"}
-{"level":"debug","msg":"Can't connect to mongo, go error: server returned error on SASL authentication step: Authentication failed.","time":"2020-10-14T17:25:55-03:00"}
-{"level":"debug","msg":"Can't connect to mongo, go error: server returned error on SASL authentication step: Authentication failed.","time":"2020-10-14T17:27:26-03:00"}
-{"level":"debug","msg":"Can't connect to mongo, go error: server returned error on SASL authentication step: Authentication failed.","time":"2020-10-14T17:28:06-03:00"}
-{"level":"debug","msg":"Can't connect to mongo, go error: server returned error on SASL authentication step: Authentication failed.","time":"2020-10-14T17:29:27-03:00"}
-{"level":"debug","msg":"Can't connect to mongo, go error: server returned error on SASL authentication step: Authentication failed.","time":"2020-10-14T17:30:58-03:00"}
-{"level":"debug","msg":"[ERROR]: String is not a valid hex representation of an ObjectId","time":"2020-10-14T17:46:35-03:00"}

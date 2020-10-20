@@ -42,7 +42,7 @@ func (u *User) Authenticate(ctx *gin.Context) {
 	if err == nil {
 		var tokenString string
 		// Generate token string
-		tokenString, err = u.utils.GenerateJWT(user.ID.Hex(), email, user.Roles)
+		tokenString, err = u.utils.GenerateJWT(user.ID.String(), email, user.Roles)
 		if err != nil {
 			ctx.JSON(http.StatusInternalServerError, model.Error{common.StatusCodeUnknown, err.Error()})
 			log.Debug("[ERROR]: ", err)
